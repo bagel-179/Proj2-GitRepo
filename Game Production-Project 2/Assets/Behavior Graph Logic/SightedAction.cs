@@ -9,7 +9,7 @@ using Unity.Properties;
 public partial class SightedAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Enemy;
-    [SerializeReference] public BlackboardVariable<DetectionScript> Sight;
+    [SerializeReference] public BlackboardVariable<FOV> Sight;
     protected override Status OnStart()
     {
         return Sight.Value.isSpotted == false ? Status.Success : Status.Failure;

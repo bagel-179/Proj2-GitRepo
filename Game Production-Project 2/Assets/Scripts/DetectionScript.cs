@@ -4,34 +4,35 @@ using UnityEngine.EventSystems;
 
 public class DetectionScript : MonoBehaviour
 {
-    public bool isSpotted = false;
-    //private float sightDistance = 10f;
+    /// <summary>
+    /// Needs to be worked on more so im running with a different idea
+    /// </summary>
+    public bool isSpotted;
+    private MeshRenderer renderer;
+    public GameObject Enemy;
+    private Plane[] cameraFrustum;
     private Camera firstperson;
+    private Collider collider;
 
     private void Start()
     {
         firstperson = Camera.main;
+        renderer = GetComponent<MeshRenderer>();
+        collider = GetComponent<Collider>();
+        Time.timeScale = 1f;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Ray ray = firstperson.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction, Color.yellow);
-        RaycastHit hit;
-        ray.origin = ray.GetPoint(100);
-        ray.direction = -ray.direction;
+        cameraFrustum = GeometryUtility.CalculateFrustumPlanes(firstperson);
 
-        while (Physics.Raycast(ray, out hit, Mathf.Infinity, 7))
+        if (GeometryUtility.TestPlanesAABB(cameraFrustum, collider.bounds))
         {
-            Debug.Log("Enemy is in sight");
-            isSpotted = true;
+            if (collider.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("Enemy Spotted");
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Time.timeScale = 0;
-        }
-        
     }
-    
 }
