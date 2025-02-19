@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 787067316630283115}
   - component: {fileID: 1629330780063441450}
   - component: {fileID: 6053352604601085903}
+  - component: {fileID: 1430938510938086134}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -297,3 +298,20 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  Win: 0
+  Dead: 0
+  WinScreen: {fileID: 0}
+  LoseScreen: {fileID: 0}
+--- !u!114 &1430938510938086134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136729946197364486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bcd53c571f8a4e8708468b449ae1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSpotted: 0
