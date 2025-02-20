@@ -22,7 +22,7 @@ public partial class InFovAction : Action
         
         Debug.Log($"Checking FOV Instance: {Player.Value.gameObject.name}");
         
-         Debug.Log($"[InFovAction] Checking isSpotted = {Player.Value.isSpotted}");
+        Debug.Log($"[InFovAction] Checking isSpotted = {Player.Value.isSpotted}");
         
         return Player.Value.isSpotted? Status.Failure : Status.Success;
     }
