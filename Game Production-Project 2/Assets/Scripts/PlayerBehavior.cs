@@ -104,6 +104,11 @@ public class Player : MonoBehaviour
             LoseScreen.SetActive(true);
         }
 
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
     }
 
     void FixedUpdate()
