@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class ArtScenePlayerScript : MonoBehaviour
 {
     // Camera Rotation
     public float mouseSensitivity = 2f;
@@ -24,16 +24,8 @@ public class Player : MonoBehaviour
     private float playerHeight;
     private float raycastDistance;
 
-    public bool Win;
-    public bool Dead;
-    public GameObject WinScreen;
-    public GameObject LoseScreen;
-
-
-     void Start()
+    void Start()
     {
-        Win = false;
-        Dead = false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         cameraTransform = Camera.main.transform;
@@ -45,30 +37,8 @@ public class Player : MonoBehaviour
         // Hides the mouse
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        WinScreen.SetActive(false);
-        LoseScreen.SetActive(false);
-        //Time.timeScale = 1f;
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Door")
-        {
-            Win = true;
-            MoveSpeed = 0f;
-            jumpForce = 0f;
-            mouseSensitivity = 0f;
-            Time.timeScale = 0;
-            return;
-        }
-        else if (other.gameObject.tag == "Enemy")
-        {
-            Dead = true;
-            MoveSpeed = 0f;
-            jumpForce = 0f;
-            mouseSensitivity = 0f;
-            return;
-        }
+        Time.timeScale = 1f;
     }
 
     void Update()
@@ -92,16 +62,6 @@ public class Player : MonoBehaviour
         else
         {
             groundCheckTimer -= Time.deltaTime;
-        }
-
-        if (Win == true)
-        {
-            WinScreen.SetActive(true);
-        }
-
-        if (Dead == true)
-        {
-            LoseScreen.SetActive(true);
         }
 
     }

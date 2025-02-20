@@ -1280,8 +1280,8 @@ GameObject:
   - component: {fileID: 355873357}
   - component: {fileID: 355873356}
   - component: {fileID: 355873355}
-  - component: {fileID: 355873354}
   - component: {fileID: 355873359}
+  - component: {fileID: 355873360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1289,30 +1289,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &355873354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355873353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6f9492a78b4954ca775a4c9fdb9703, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 2
-  MoveSpeed: 5
-  jumpForce: 10
-  fallMultiplier: 2.5
-  ascendMultiplier: 2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  Win: 0
-  Dead: 0
-  WinScreen: {fileID: 0}
-  LoseScreen: {fileID: 0}
 --- !u!136 &355873355
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1398,7 +1374,7 @@ Transform:
   m_GameObject: {fileID: 355873353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0426, y: -0.516, z: 9.6224}
+  m_LocalPosition: {x: 2.0426, y: -0.491, z: 9.6224}
   m_LocalScale: {x: 1.2204547, y: 2.0197177, z: 1.2040951}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1432,6 +1408,26 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &355873360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355873353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996a53e24193c5c42a14271a29363dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 2
+  MoveSpeed: 4
+  jumpForce: 10.5
+  fallMultiplier: 2.5
+  ascendMultiplier: 2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!4 &413905002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5152105943445160585, guid: 6f17fa338b3f04a4a9e6245e1e57b488, type: 3}
