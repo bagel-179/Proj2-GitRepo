@@ -64,6 +64,11 @@ public class ArtScenePlayerScript : MonoBehaviour
             groundCheckTimer -= Time.deltaTime;
         }
 
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
     }
 
     void FixedUpdate()
