@@ -128,6 +128,7 @@ public class Player : MonoBehaviour
         velocity.x = targetVelocity.x;
         velocity.z = targetVelocity.z;
         rb.linearVelocity = velocity;
+        //rb.AddForce(velocity);
 
         // If we aren't moving and are on the ground, stop velocity so we don't slide
         if (isGrounded && moveHorizontal == 0 && moveForward == 0)
