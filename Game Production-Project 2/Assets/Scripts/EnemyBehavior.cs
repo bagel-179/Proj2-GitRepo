@@ -8,10 +8,12 @@ public class Enemy : MonoBehaviour
     public GameObject player;   
     public bool isStopped;
     private NavMeshAgent agent;
+    private MeshRenderer mesh;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
     }
     void Update()
     {
@@ -28,8 +30,10 @@ public class Enemy : MonoBehaviour
         if (isStopped)
         {
             agent.isStopped = true;
+            StartCoroutine(frozen());
             //start a coroutine for how long you will be frozen for
             // iterate on idea to make that time more interactive for the player
+            //there also needs to be a lock out/cooldown on this coroutine
         }
         
         
@@ -37,8 +41,11 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator frozen()
     {
+        float stunTimer = Random.Range(1, 3);
         //changes something about the manniquin
-
+        // change color
+        
+        yield return new WaitForSeconds(stunTimer);
         agent.isStopped = false;
     }
 }

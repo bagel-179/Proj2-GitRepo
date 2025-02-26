@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0a63867-333d-44aa-acbd-ade22bbde39d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Production-Project 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Production-Project 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Graph Logic/InFovAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Graph Logic/InFovAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FOV.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FOV.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +108,7 @@
       <workItem from="1739928034770" duration="12705000" />
       <workItem from="1739975954137" duration="2909000" />
       <workItem from="1739988519791" duration="7827000" />
-      <workItem from="1740549755315" duration="4533000" />
+      <workItem from="1740549755315" duration="6127000" />
     </task>
     <servers />
   </component>

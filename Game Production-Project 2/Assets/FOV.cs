@@ -31,7 +31,10 @@ public class FOV : MonoBehaviour
                     if (enemy.CompareTag("Enemy"))
                     {
                         isSpotted = true;
-                        
+                        var script = enemy.GetComponent<Enemy>();
+
+                        script.isStopped = true;
+
                     }
                     
                 }
