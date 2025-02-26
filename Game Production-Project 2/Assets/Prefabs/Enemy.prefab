@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4754470543748211162}
   - component: {fileID: 455144355333166518}
   - component: {fileID: 3343610127498453717}
+  - component: {fileID: 3740206824194806142}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +123,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -150,11 +151,20 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 5239951739238482099
   - rid: 5239951739238482100
+  - rid: 2647943312538075198
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
+    - rid: 2647943312538075198
+      type: {class: 'BlackboardVariable`1[[FOV, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 6225450696539593165
+          m_Value1: 14155315381698639980
+        Name: New FOV
+        m_Value: {fileID: 0}
     - rid: 5239951739238482099
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -171,3 +181,26 @@ MonoBehaviour:
           m_Value1: 1624754645481327984
         Name: Target
         m_Value: {fileID: 0}
+--- !u!136 &3740206824194806142
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659889021193654896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.95358366
+  m_Height: 2.8073585
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.031285085, z: -0.046416227}
