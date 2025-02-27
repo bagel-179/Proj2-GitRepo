@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public bool isStopped;
     private NavMeshAgent agent;
     private MeshRenderer mesh;
+    private bool onCooldown;
+    private float cooldownTimer = 5f;
 
     void Start()
     {
@@ -29,14 +31,28 @@ public class Enemy : MonoBehaviour
 
         if (isStopped)
         {
-            agent.isStopped = true;
-            StartCoroutine(frozen());
+            if (!onCooldown)
+            {
+                agent.isStopped = true;
+                StartCoroutine(Cooldown());
+                StartCoroutine(frozen());
+                agent.isStopped = false;
+                agent.destination = player.transform.position;
+
+            }
             //start a coroutine for how long you will be frozen for
             // iterate on idea to make that time more interactive for the player
             //there also needs to be a lock out/cooldown on this coroutine
         }
         
         
+    }
+
+    public IEnumerator Cooldown()
+    {
+        onCooldown = true;
+        yield return new WaitForSeconds(cooldownTimer);
+        onCooldown = false;
     }
 
     public IEnumerator frozen()
