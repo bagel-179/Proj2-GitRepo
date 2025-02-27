@@ -24,6 +24,7 @@ public partial class InFovAction : Action
         
         Debug.Log($"[InFovAction] Checking isSpotted = {Player.Value.isSpotted}");
         
+        
         return Player.Value.isSpotted? Status.Failure : Status.Success;
     }
 

@@ -13,10 +13,11 @@ GameObject:
   - component: {fileID: 4060603161436492140}
   - component: {fileID: 4754470543748211162}
   - component: {fileID: 455144355333166518}
-  - component: {fileID: 3343610127498453717}
+  - component: {fileID: 3740206824194806142}
+  - component: {fileID: 8401882140448043385}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +123,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -134,7 +135,30 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3343610127498453717
+--- !u!136 &3740206824194806142
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659889021193654896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.95358366
+  m_Height: 2.8073585
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.031285085, z: -0.046416227}
+--- !u!114 &8401882140448043385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,31 +167,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1659889021193654896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Script: {fileID: 11500000, guid: c5dd567dc0aeaa440b10c2a02242dac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Graph: {fileID: -5437303509053268931, guid: 7cd4dd6e6f741be4b8c00b91d2b23a95, type: 2}
-  m_BlackboardVariableOverridesList:
-  - rid: 5239951739238482099
-  - rid: 5239951739238482100
-  m_IsInitialised: 0
-  m_IsStarted: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 5239951739238482099
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 1659889021193654896}
-    - rid: 5239951739238482100
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 13281542181682817393
-          m_Value1: 1624754645481327984
-        Name: Target
-        m_Value: {fileID: 0}
+  player: {fileID: 0}
+  isStopped: 0
